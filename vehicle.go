@@ -40,6 +40,9 @@ type feedbackResult struct {
 
 type rating float32
 
+var vehicleResult map[string]feedbackResult
+var inventory []vehicle
+
 const (
 	extraPositive rating = 1.2
 	positive      rating = 0.6
@@ -47,9 +50,6 @@ const (
 	initial       rating = 5.0
 	extraNegative rating = -1.2
 )
-
-var vehicleResult = make(map[string]feedbackResult)
-var inventory []vehicle
 
 func init() {
 
